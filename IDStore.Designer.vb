@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class IDStore
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,12 @@ Partial Class IDStore
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnExitNoSave = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,18 +53,30 @@ Partial Class IDStore
         '
         Me.btnExit.BackColor = System.Drawing.Color.Red
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(1025, 580)
+        Me.btnExit.Location = New System.Drawing.Point(982, 580)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.Size = New System.Drawing.Size(118, 23)
         Me.btnExit.TabIndex = 1
-        Me.btnExit.Text = "Exit"
+        Me.btnExit.Text = "Exit and Save Input"
         Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'btnExitNoSave
+        '
+        Me.btnExitNoSave.BackColor = System.Drawing.Color.Red
+        Me.btnExitNoSave.ForeColor = System.Drawing.Color.White
+        Me.btnExitNoSave.Location = New System.Drawing.Point(844, 580)
+        Me.btnExitNoSave.Name = "btnExitNoSave"
+        Me.btnExitNoSave.Size = New System.Drawing.Size(118, 23)
+        Me.btnExitNoSave.TabIndex = 2
+        Me.btnExitNoSave.Text = "Exit with No Save"
+        Me.btnExitNoSave.UseVisualStyleBackColor = False
         '
         'IDStore
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1119, 613)
+        Me.Controls.Add(Me.btnExitNoSave)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "IDStore"
@@ -75,4 +88,5 @@ Partial Class IDStore
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnExit As Button
+    Friend WithEvents btnExitNoSave As Button
 End Class

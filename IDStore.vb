@@ -44,10 +44,9 @@
                     If v > 0 Then
                         textstr.Append(",")
                     End If
-                    'If IsNothing(DataGridView1.Rows(x).Cells(v).Value) Then
-                    'textstr.Append(" ")
-                    'Else
-                    textstr.Append(DataGridView1.Rows(x).Cells(v).Value.ToString())
+                    Dim tempstr As String = DataGridView1.Rows(x).Cells(v).Value.ToString()
+                    tempstr = tempstr.Replace(",", "") ' remove any commas input into any field so csv file is not corrupted
+                    textstr.Append(tempstr)
 
                 Next
             End If
@@ -57,5 +56,11 @@
         IO.File.WriteAllText(FName, textstr.ToString())
 
         Exit Sub
+    End Sub
+
+    Private Sub btnExitNoSave_Click(sender As Object, e As EventArgs) Handles btnExitNoSave.Click
+        If DataGridView1.
+        Me.Close() Then
+            Exit Sub
     End Sub
 End Class
