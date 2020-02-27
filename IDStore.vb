@@ -47,7 +47,6 @@
                     Dim tempstr As String = DataGridView1.Rows(x).Cells(v).Value.ToString()
                     tempstr = tempstr.Replace(",", "") ' remove any commas input into any field so csv file is not corrupted
                     textstr.Append(tempstr)
-
                 Next
             End If
             'adding new line to text
@@ -59,8 +58,7 @@
     End Sub
 
     Private Sub btnExitNoSave_Click(sender As Object, e As EventArgs) Handles btnExitNoSave.Click
-        If DataGridView1.
-        Me.Close() Then
-            Exit Sub
+        Me.Close()
+        Exit Sub
     End Sub
 End Class
