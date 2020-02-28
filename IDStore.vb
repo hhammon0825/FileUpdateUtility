@@ -2,14 +2,14 @@
     Public FName As String = "./IDStore.csv"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim tablename As String = "export"
-        Dim DataSet As DataSet = New DataSet()
-        DataSet.Tables.Add(tablename)
-        DataSet.Tables(tablename).Columns.Add("Common Name")
-        DataSet.Tables(tablename).Columns.Add("Web Location")
-        DataSet.Tables(tablename).Columns.Add("ID")
-        DataSet.Tables(tablename).Columns.Add("PWD")
-        DataSet.Tables(tablename).Columns.Add("Notes")
+        Dim tablename As String = "Export"
+        Dim DataSet1 As DataSet = New DataSet()
+        DataSet1.Tables.Add(tablename)
+        DataSet1.Tables(tablename).Columns.Add("Common Name")
+        DataSet1.Tables(tablename).Columns.Add("Web Location")
+        DataSet1.Tables(tablename).Columns.Add("ID")
+        DataSet1.Tables(tablename).Columns.Add("PWD")
+        DataSet1.Tables(tablename).Columns.Add("Notes")
 
         Dim SR As System.IO.StreamReader = New System.IO.StreamReader(FName)
         Dim allData As String = SR.ReadToEnd()
@@ -19,15 +19,15 @@
             r = r.Trim(vbLf).Trim
             Dim items As String() = r.Split(",")
                 If items(0) <> vbNullString And items(0) <> Nothing Then
-                    DataSet.Tables(tablename).Rows.Add(items)
-                End If
+                DataSet1.Tables(tablename).Rows.Add(items)
+            End If
 
             incr1 += 1
         Next
         SR.Close()
         SR.Dispose()
 
-        DataGridView1.DataSource = DataSet.Tables(0).DefaultView
+        DataGridView1.DataSource = DataSet1.Tables(0).DefaultView
         Me.Refresh()
     End Sub
 
