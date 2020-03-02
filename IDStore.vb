@@ -28,6 +28,7 @@
         SR.Dispose()
 
         DataGridView1.DataSource = DataSet1.Tables(0).DefaultView
+
         Me.Refresh()
     End Sub
 
