@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class IDStore
+Partial Class CSVUpdater
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -33,6 +33,7 @@ Partial Class IDStore
         Me.CommonNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CommonNameDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WebLocationDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnOpenCSV = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -130,16 +131,28 @@ Partial Class IDStore
         Me.WebLocationDataGridViewTextBoxColumn1.Name = "WebLocationDataGridViewTextBoxColumn1"
         Me.WebLocationDataGridViewTextBoxColumn1.Width = 130
         '
-        'IDStore
+        'btnOpenCSV
+        '
+        Me.btnOpenCSV.BackColor = System.Drawing.Color.Yellow
+        Me.btnOpenCSV.ForeColor = System.Drawing.Color.Black
+        Me.btnOpenCSV.Location = New System.Drawing.Point(12, 7)
+        Me.btnOpenCSV.Name = "btnOpenCSV"
+        Me.btnOpenCSV.Size = New System.Drawing.Size(118, 23)
+        Me.btnOpenCSV.TabIndex = 3
+        Me.btnOpenCSV.Text = "Open a CSV File"
+        Me.btnOpenCSV.UseVisualStyleBackColor = False
+        '
+        'CSVUpdater
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1353, 850)
+        Me.Controls.Add(Me.btnOpenCSV)
         Me.Controls.Add(Me.btnExitNoSave)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "IDStore"
-        Me.Text = "Generic ID Store"
+        Me.Name = "CSVUpdater"
+        Me.Text = "CSV File Updater"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -151,4 +164,5 @@ Partial Class IDStore
     Friend WithEvents CommonNameDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents CommonNameDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents WebLocationDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents btnOpenCSV As Button
 End Class

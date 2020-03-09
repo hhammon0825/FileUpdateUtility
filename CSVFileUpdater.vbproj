@@ -76,11 +76,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDStore.vb">
+    <Compile Include="CSVUpdater.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IDStore.Designer.vb">
-      <DependentUpon>IDStore.vb</DependentUpon>
+    <Compile Include="CSVUpdater.Designer.vb">
+      <DependentUpon>CSVUpdater.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -100,8 +100,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="IDStore.resx">
-      <DependentUpon>IDStore.vb</DependentUpon>
+    <EmbeddedResource Include="CSVUpdater.resx">
+      <DependentUpon>CSVUpdater.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
