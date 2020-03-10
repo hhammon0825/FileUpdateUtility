@@ -117,4 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblInfo.Text" xml:space="preserve">
+    <value>To use this form:
+First time or with file already open: Click on the Yellow "Open a CSV File" button and choose which file to open in the dialog box
+
+File Requirement: The file chosen must be a .csv or .txt comma delimited file where the first record has the field names, 
+and the rest of the file has the data fields separated by commas (No commas inside each data field).
+
+You can update data in a field in an exisiting row 
+You can add new rows of data at the bottom of the data grid
+You can delete a row of data by selecting that row and hitting the Delete key.
+
+You can save any updates by clicking the Blue "Save Current File" button - the current file will be rewriten
+You can Exit without saving any updates (if the Blue button has not been clicked) by clicking the Red "Exit With No Save" button
+You can Exit and save any updates by clicking the Red "Exit and Save Input" button
+
+You can sort any column by clicking on the column header name.
+If you have sorted the visible data and cannot get back to the original display, simply re-open the file by clicking on the Yellow 
+"Open a CSV File" button and select the same file name.</value>
+  </data>
 </root>

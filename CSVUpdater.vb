@@ -46,7 +46,6 @@
     Private Sub btnOpenCSV_Click(sender As Object, e As EventArgs) Handles btnOpenCSV.Click
         Dim myStream As System.IO.StreamReader = Nothing
         Dim openFileDialog1 As New OpenFileDialog()
-        lblInfo.Visible = False
 
         If DataSet1.DataSetName = tablename Then
             DataSet1.Dispose()
@@ -119,7 +118,6 @@
                 End If
             End Try
         Else
-            lblInfo.Visible = True
             btnSaveFile.Visible = False
             btnExit.Visible = False
 
@@ -137,6 +135,15 @@
 
     Private Sub btnSaveFile_Click(sender As Object, e As EventArgs) Handles btnSaveFile.Click
         SaveDataGrid()
+        Exit Sub
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub btnInfoForm_Click(sender As Object, e As EventArgs) Handles btnInfoForm.Click
+        CSVUpdaterInfo.Show()
         Exit Sub
     End Sub
 End Class

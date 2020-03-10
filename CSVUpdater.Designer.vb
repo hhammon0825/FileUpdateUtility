@@ -27,7 +27,6 @@ Partial Class CSVUpdater
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CSVUpdater))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnExitNoSave = New System.Windows.Forms.Button()
@@ -38,7 +37,7 @@ Partial Class CSVUpdater
         Me.lblOpenFN = New System.Windows.Forms.Label()
         Me.txtOpenFN = New System.Windows.Forms.TextBox()
         Me.btnSaveFile = New System.Windows.Forms.Button()
-        Me.lblInfo = New System.Windows.Forms.Label()
+        Me.btnInfoForm = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,7 +68,7 @@ Partial Class CSVUpdater
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.Location = New System.Drawing.Point(11, 36)
+        Me.DataGridView1.Location = New System.Drawing.Point(11, 58)
         Me.DataGridView1.Name = "DataGridView1"
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow
@@ -90,7 +89,7 @@ Partial Class CSVUpdater
         Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.InfoText
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Blue
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.Size = New System.Drawing.Size(1333, 802)
+        Me.DataGridView1.Size = New System.Drawing.Size(1333, 780)
         Me.DataGridView1.TabIndex = 0
         '
         'btnExit
@@ -108,7 +107,7 @@ Partial Class CSVUpdater
         '
         Me.btnExitNoSave.BackColor = System.Drawing.Color.Red
         Me.btnExitNoSave.ForeColor = System.Drawing.Color.White
-        Me.btnExitNoSave.Location = New System.Drawing.Point(1100, 8)
+        Me.btnExitNoSave.Location = New System.Drawing.Point(1224, 33)
         Me.btnExitNoSave.Name = "btnExitNoSave"
         Me.btnExitNoSave.Size = New System.Drawing.Size(118, 23)
         Me.btnExitNoSave.TabIndex = 2
@@ -150,7 +149,7 @@ Partial Class CSVUpdater
         'lblOpenFN
         '
         Me.lblOpenFN.AutoSize = True
-        Me.lblOpenFN.Location = New System.Drawing.Point(137, 12)
+        Me.lblOpenFN.Location = New System.Drawing.Point(136, 13)
         Me.lblOpenFN.Name = "lblOpenFN"
         Me.lblOpenFN.Size = New System.Drawing.Size(58, 13)
         Me.lblOpenFN.TabIndex = 4
@@ -159,10 +158,10 @@ Partial Class CSVUpdater
         '
         'txtOpenFN
         '
-        Me.txtOpenFN.Location = New System.Drawing.Point(194, 9)
+        Me.txtOpenFN.Location = New System.Drawing.Point(194, 10)
         Me.txtOpenFN.Name = "txtOpenFN"
         Me.txtOpenFN.ReadOnly = True
-        Me.txtOpenFN.Size = New System.Drawing.Size(777, 20)
+        Me.txtOpenFN.Size = New System.Drawing.Size(900, 20)
         Me.txtOpenFN.TabIndex = 5
         Me.txtOpenFN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtOpenFN.Visible = False
@@ -171,29 +170,30 @@ Partial Class CSVUpdater
         '
         Me.btnSaveFile.BackColor = System.Drawing.Color.Blue
         Me.btnSaveFile.ForeColor = System.Drawing.Color.White
-        Me.btnSaveFile.Location = New System.Drawing.Point(976, 8)
+        Me.btnSaveFile.Location = New System.Drawing.Point(1102, 8)
         Me.btnSaveFile.Name = "btnSaveFile"
         Me.btnSaveFile.Size = New System.Drawing.Size(118, 23)
         Me.btnSaveFile.TabIndex = 6
         Me.btnSaveFile.Text = "Save Current File"
         Me.btnSaveFile.UseVisualStyleBackColor = False
         '
-        'lblInfo
+        'btnInfoForm
         '
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.Location = New System.Drawing.Point(284, 179)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(751, 272)
-        Me.lblInfo.TabIndex = 7
-        Me.lblInfo.Text = resources.GetString("lblInfo.Text")
+        Me.btnInfoForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInfoForm.ForeColor = System.Drawing.Color.Black
+        Me.btnInfoForm.Location = New System.Drawing.Point(1102, 32)
+        Me.btnInfoForm.Name = "btnInfoForm"
+        Me.btnInfoForm.Size = New System.Drawing.Size(118, 23)
+        Me.btnInfoForm.TabIndex = 7
+        Me.btnInfoForm.Text = "Display Help Info"
+        Me.btnInfoForm.UseVisualStyleBackColor = False
         '
         'CSVUpdater
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1353, 850)
-        Me.Controls.Add(Me.lblInfo)
+        Me.Controls.Add(Me.btnInfoForm)
         Me.Controls.Add(Me.btnSaveFile)
         Me.Controls.Add(Me.txtOpenFN)
         Me.Controls.Add(Me.lblOpenFN)
@@ -219,5 +219,5 @@ Partial Class CSVUpdater
     Friend WithEvents lblOpenFN As Label
     Friend WithEvents txtOpenFN As TextBox
     Friend WithEvents btnSaveFile As Button
-    Friend WithEvents lblInfo As Label
+    Friend WithEvents btnInfoForm As Button
 End Class
