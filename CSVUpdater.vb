@@ -3,7 +3,6 @@
     Dim ReadError As Boolean = False
     Dim FileLoading As Boolean = False
     Dim SLOpenFName As String = ""
-    Dim SLFName As String = ""
     Dim tablename As String = "Export"
     Dim DataSet1 As DataSet
 
@@ -47,15 +46,19 @@
     Private Sub btnOpenCSV_Click(sender As Object, e As EventArgs) Handles btnOpenCSV.Click
         Dim myStream As System.IO.StreamReader = Nothing
         Dim openFileDialog1 As New OpenFileDialog()
+        lblInfo.Visible = False
+
         If DataSet1.DataSetName = tablename Then
             DataSet1.Dispose()
             DataSet1 = New DataSet()
+            DataGridView1.DataSource = vbNull
         End If
         DataSet1.Tables.Add(tablename)
         DataSet1.DataSetName = tablename
+        DataGridView1.DataSource = DataSet1
 
         openFileDialog1.InitialDirectory = "./"
-        openFileDialog1.Filter = "csv files (*.csv)|*.csv"
+        openFileDialog1.Filter = "txt files (*.txt)|*.txt|csv files (*.csv)|*.csv"
         openFileDialog1.Title = "Open CSV Text File"
         openFileDialog1.FilterIndex = 2
         openFileDialog1.RestoreDirectory = True
@@ -71,10 +74,9 @@
                 myStream = New System.IO.StreamReader(openFileDialog1.FileName)
                 If (myStream IsNot Nothing) Then
                     SLOpenFName = openFileDialog1.FileName
-                    SLFName = SLOpenFName
-                    DataGridView1.Rows.Clear()
-                    DataGridView1.Columns.Clear()
-
+                    lblOpenFN.Visible = True
+                    txtOpenFN.Visible = True
+                    txtOpenFN.Text = SLOpenFName
                     Dim allData As String = myStream.ReadToEnd()
                     Dim rows As String() = allData.Split(vbCrLf) '("\r".ToCharArray())
                     Dim incr1 As Integer = 0
@@ -98,11 +100,16 @@
                         incr1 += 1
                     Next
                     myStream.Close()
+                    btnSaveFile.Visible = True
+                    btnExit.Visible = True
                 End If
+
                 myStream.Dispose()
                 DataGridView1.DataSource = DataSet1.Tables(0).DefaultView
                 DataGridView1.Refresh()
                 FileLoading = False
+                Me.Refresh()
+
             Catch Ex As Exception
                 ErrorMsgBox("Cannot read file from disk. Original error: " & Ex.Message)
             Finally
@@ -111,7 +118,13 @@
                     myStream.Close()
                 End If
             End Try
+        Else
+            lblInfo.Visible = True
+            btnSaveFile.Visible = False
+            btnExit.Visible = False
+
         End If
+
     End Sub
     Private Sub ErrorMsgBox(ByVal ErrMsg As String)
         System.Windows.Forms.MessageBox.Show(ErrMsg, "Error",
@@ -119,6 +132,11 @@
                                                 System.Windows.Forms.MessageBoxIcon.Error,
                                                 System.Windows.Forms.MessageBoxDefaultButton.Button1,
                                                 System.Windows.Forms.MessageBoxOptions.DefaultDesktopOnly)
+        Exit Sub
+    End Sub
+
+    Private Sub btnSaveFile_Click(sender As Object, e As EventArgs) Handles btnSaveFile.Click
+        SaveDataGrid()
         Exit Sub
     End Sub
 End Class

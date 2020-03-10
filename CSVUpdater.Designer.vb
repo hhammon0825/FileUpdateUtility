@@ -27,6 +27,7 @@ Partial Class CSVUpdater
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CSVUpdater))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnExitNoSave = New System.Windows.Forms.Button()
@@ -34,6 +35,10 @@ Partial Class CSVUpdater
         Me.CommonNameDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WebLocationDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnOpenCSV = New System.Windows.Forms.Button()
+        Me.lblOpenFN = New System.Windows.Forms.Label()
+        Me.txtOpenFN = New System.Windows.Forms.TextBox()
+        Me.btnSaveFile = New System.Windows.Forms.Button()
+        Me.lblInfo = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -103,7 +108,7 @@ Partial Class CSVUpdater
         '
         Me.btnExitNoSave.BackColor = System.Drawing.Color.Red
         Me.btnExitNoSave.ForeColor = System.Drawing.Color.White
-        Me.btnExitNoSave.Location = New System.Drawing.Point(1095, 8)
+        Me.btnExitNoSave.Location = New System.Drawing.Point(1100, 8)
         Me.btnExitNoSave.Name = "btnExitNoSave"
         Me.btnExitNoSave.Size = New System.Drawing.Size(118, 23)
         Me.btnExitNoSave.TabIndex = 2
@@ -142,11 +147,56 @@ Partial Class CSVUpdater
         Me.btnOpenCSV.Text = "Open a CSV File"
         Me.btnOpenCSV.UseVisualStyleBackColor = False
         '
+        'lblOpenFN
+        '
+        Me.lblOpenFN.AutoSize = True
+        Me.lblOpenFN.Location = New System.Drawing.Point(137, 12)
+        Me.lblOpenFN.Name = "lblOpenFN"
+        Me.lblOpenFN.Size = New System.Drawing.Size(58, 13)
+        Me.lblOpenFN.TabIndex = 4
+        Me.lblOpenFN.Text = "Open File: "
+        Me.lblOpenFN.Visible = False
+        '
+        'txtOpenFN
+        '
+        Me.txtOpenFN.Location = New System.Drawing.Point(194, 9)
+        Me.txtOpenFN.Name = "txtOpenFN"
+        Me.txtOpenFN.ReadOnly = True
+        Me.txtOpenFN.Size = New System.Drawing.Size(777, 20)
+        Me.txtOpenFN.TabIndex = 5
+        Me.txtOpenFN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtOpenFN.Visible = False
+        '
+        'btnSaveFile
+        '
+        Me.btnSaveFile.BackColor = System.Drawing.Color.Blue
+        Me.btnSaveFile.ForeColor = System.Drawing.Color.White
+        Me.btnSaveFile.Location = New System.Drawing.Point(976, 8)
+        Me.btnSaveFile.Name = "btnSaveFile"
+        Me.btnSaveFile.Size = New System.Drawing.Size(118, 23)
+        Me.btnSaveFile.TabIndex = 6
+        Me.btnSaveFile.Text = "Save Current File"
+        Me.btnSaveFile.UseVisualStyleBackColor = False
+        '
+        'lblInfo
+        '
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfo.Location = New System.Drawing.Point(284, 179)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(751, 272)
+        Me.lblInfo.TabIndex = 7
+        Me.lblInfo.Text = resources.GetString("lblInfo.Text")
+        '
         'CSVUpdater
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1353, 850)
+        Me.Controls.Add(Me.lblInfo)
+        Me.Controls.Add(Me.btnSaveFile)
+        Me.Controls.Add(Me.txtOpenFN)
+        Me.Controls.Add(Me.lblOpenFN)
         Me.Controls.Add(Me.btnOpenCSV)
         Me.Controls.Add(Me.btnExitNoSave)
         Me.Controls.Add(Me.btnExit)
@@ -155,6 +205,7 @@ Partial Class CSVUpdater
         Me.Text = "CSV File Updater"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -165,4 +216,8 @@ Partial Class CSVUpdater
     Friend WithEvents CommonNameDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents WebLocationDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents btnOpenCSV As Button
+    Friend WithEvents lblOpenFN As Label
+    Friend WithEvents txtOpenFN As TextBox
+    Friend WithEvents btnSaveFile As Button
+    Friend WithEvents lblInfo As Label
 End Class
