@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5E8FA541-E642-4EA7-800A-0AB6C912D32F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>GenericIDStore.My.MyApplication</StartupObject>
-    <RootNamespace>GenericIDStore</RootNamespace>
-    <AssemblyName>GenericIDStore</AssemblyName>
+    <StartupObject>CSVFileUpdater.My.MyApplication</StartupObject>
+    <RootNamespace>CSVFileUpdater</RootNamespace>
+    <AssemblyName>CSVFileUpdater</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>GenericIDStore.xml</DocumentationFile>
+    <DocumentationFile>CSVFileUpdater.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>GenericIDStore.xml</DocumentationFile>
+    <DocumentationFile>CSVFileUpdater.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -93,6 +93,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>

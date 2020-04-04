@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.GenericIDStore.CSVUpdater
+            Me.MainForm = Global.CSVFileUpdater.CSVUpdater
         End Sub
     End Class
 End Namespace

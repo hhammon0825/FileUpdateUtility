@@ -50,6 +50,7 @@ Partial Class CSVUpdater
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -68,7 +69,8 @@ Partial Class CSVUpdater
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.Location = New System.Drawing.Point(11, 58)
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.DataGridView1.Location = New System.Drawing.Point(10, 36)
         Me.DataGridView1.Name = "DataGridView1"
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow
@@ -89,25 +91,26 @@ Partial Class CSVUpdater
         Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.InfoText
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Blue
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.Size = New System.Drawing.Size(1333, 780)
+        Me.DataGridView1.Size = New System.Drawing.Size(1364, 825)
         Me.DataGridView1.TabIndex = 0
         '
         'btnExit
         '
         Me.btnExit.BackColor = System.Drawing.Color.Red
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(1224, 8)
+        Me.btnExit.Location = New System.Drawing.Point(1258, 8)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(118, 23)
         Me.btnExit.TabIndex = 1
         Me.btnExit.Text = "Exit and Save Input"
         Me.btnExit.UseVisualStyleBackColor = False
+        Me.btnExit.Visible = False
         '
         'btnExitNoSave
         '
         Me.btnExitNoSave.BackColor = System.Drawing.Color.Red
         Me.btnExitNoSave.ForeColor = System.Drawing.Color.White
-        Me.btnExitNoSave.Location = New System.Drawing.Point(1224, 33)
+        Me.btnExitNoSave.Location = New System.Drawing.Point(1139, 8)
         Me.btnExitNoSave.Name = "btnExitNoSave"
         Me.btnExitNoSave.Size = New System.Drawing.Size(118, 23)
         Me.btnExitNoSave.TabIndex = 2
@@ -149,7 +152,7 @@ Partial Class CSVUpdater
         'lblOpenFN
         '
         Me.lblOpenFN.AutoSize = True
-        Me.lblOpenFN.Location = New System.Drawing.Point(136, 13)
+        Me.lblOpenFN.Location = New System.Drawing.Point(133, 14)
         Me.lblOpenFN.Name = "lblOpenFN"
         Me.lblOpenFN.Size = New System.Drawing.Size(58, 13)
         Me.lblOpenFN.TabIndex = 4
@@ -161,7 +164,7 @@ Partial Class CSVUpdater
         Me.txtOpenFN.Location = New System.Drawing.Point(194, 10)
         Me.txtOpenFN.Name = "txtOpenFN"
         Me.txtOpenFN.ReadOnly = True
-        Me.txtOpenFN.Size = New System.Drawing.Size(900, 20)
+        Me.txtOpenFN.Size = New System.Drawing.Size(702, 20)
         Me.txtOpenFN.TabIndex = 5
         Me.txtOpenFN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtOpenFN.Visible = False
@@ -170,7 +173,7 @@ Partial Class CSVUpdater
         '
         Me.btnSaveFile.BackColor = System.Drawing.Color.Blue
         Me.btnSaveFile.ForeColor = System.Drawing.Color.White
-        Me.btnSaveFile.Location = New System.Drawing.Point(1102, 8)
+        Me.btnSaveFile.Location = New System.Drawing.Point(1020, 8)
         Me.btnSaveFile.Name = "btnSaveFile"
         Me.btnSaveFile.Size = New System.Drawing.Size(118, 23)
         Me.btnSaveFile.TabIndex = 6
@@ -181,7 +184,7 @@ Partial Class CSVUpdater
         '
         Me.btnInfoForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnInfoForm.ForeColor = System.Drawing.Color.Black
-        Me.btnInfoForm.Location = New System.Drawing.Point(1102, 32)
+        Me.btnInfoForm.Location = New System.Drawing.Point(901, 8)
         Me.btnInfoForm.Name = "btnInfoForm"
         Me.btnInfoForm.Size = New System.Drawing.Size(118, 23)
         Me.btnInfoForm.TabIndex = 7
@@ -192,7 +195,7 @@ Partial Class CSVUpdater
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1353, 850)
+        Me.ClientSize = New System.Drawing.Size(1384, 861)
         Me.Controls.Add(Me.btnInfoForm)
         Me.Controls.Add(Me.btnSaveFile)
         Me.Controls.Add(Me.txtOpenFN)
@@ -201,7 +204,9 @@ Partial Class CSVUpdater
         Me.Controls.Add(Me.btnExitNoSave)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.DataGridView1)
+        Me.MaximizeBox = False
         Me.Name = "CSVUpdater"
+        Me.Padding = New System.Windows.Forms.Padding(10, 10, 10, 0)
         Me.Text = "CSV File Updater"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

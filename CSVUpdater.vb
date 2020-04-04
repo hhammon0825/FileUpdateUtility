@@ -5,11 +5,15 @@
     Dim SLOpenFName As String = ""
     Dim tablename As String = "Export"
     Dim DataSet1 As DataSet
+    Dim HomeLoc As Point = New Point(10, 60)
+    Dim BasicSize As Size = New Size(1400, 900)
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataSet1 = New DataSet()
-        Me.Show()
-        Me.Refresh()
+        'Me.Location = HomeLoc
+        'Me.Size = BasicSize
+        'Me.Show()
+        'Me.Refresh()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
