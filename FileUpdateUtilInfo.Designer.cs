@@ -8,7 +8,7 @@ using Microsoft.VisualBasic.CompilerServices;
 namespace CSVFileUpdater
 {
     [DesignerGenerated()]
-    public partial class CSVUpdaterInfo : Form
+    public partial class FileUpdateUtilInfo : Form
     {
 
         // Form overrides dispose to clean up the component list.
@@ -37,7 +37,7 @@ namespace CSVFileUpdater
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(CSVUpdaterInfo));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(FileUpdateUtilInfo));
             _lblInfo = new Label();
             _btnInfoExit = new Button();
             _btnInfoExit.Click += new EventHandler(btnInfoExit_Click);

@@ -8,7 +8,7 @@ using Microsoft.VisualBasic.CompilerServices;
 namespace CSVFileUpdater
 {
     [DesignerGenerated()]
-    public partial class CSVUpdater : Form
+    public partial class FileUpdateUtility : Form
     {
 
         // Form overrides dispose to clean up the component list.

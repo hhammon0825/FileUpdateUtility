@@ -3,11 +3,11 @@
 namespace CSVFileUpdater
 {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-    public partial class CSVUpdaterInfo
+    public partial class FileUpdateUtilInfo
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-        public CSVUpdaterInfo()
+        public FileUpdateUtilInfo()
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             InitializeComponent();

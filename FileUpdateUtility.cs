@@ -7,10 +7,10 @@ using Microsoft.VisualBasic.CompilerServices;
 
 namespace CSVFileUpdater
 {
-    public partial class CSVUpdater
+    public partial class FileUpdateUtility
     {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-        public CSVUpdater()
+        public FileUpdateUtility()
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             InitializeComponent();

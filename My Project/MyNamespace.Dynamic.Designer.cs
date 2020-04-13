@@ -9,9 +9,9 @@ namespace CSVFileUpdater.My
         internal partial class MyForms
         {
             [EditorBrowsable(EditorBrowsableState.Never)]
-            public CSVUpdater m_CSVUpdater;
+            public FileUpdateUtility m_CSVUpdater;
 
-            public CSVUpdater CSVUpdater
+            public FileUpdateUtility CSVUpdater
             {
                 [DebuggerHidden]
                 get
@@ -32,9 +32,9 @@ namespace CSVFileUpdater.My
             }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
-            public CSVUpdaterInfo m_CSVUpdaterInfo;
+            public FileUpdateUtilInfo m_CSVUpdaterInfo;
 
-            public CSVUpdaterInfo CSVUpdaterInfo
+            public FileUpdateUtilInfo CSVUpdaterInfo
             {
                 [DebuggerHidden]
                 get
